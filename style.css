@@ -1,3 +1,12 @@
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @font-face {
   font-family: "IBM Plex Mono";
   src: url("./assets/ibm-plex-mono.woff2"), url("./assets/ibm-plex-mono.woff");
@@ -117,6 +126,7 @@ div.slides img {
   position: absolute;
   top: 0;
   left: 0;
+  transition: transform 0.5s;
 }
 
 /*first img in the slideshow to show first*/
