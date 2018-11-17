@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("./assets/ibm-plex-mono.woff2"), url("./assets/ibm-plex-mono.woff");
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("./assets/youngserif.woff2"), url("./assets/youngserif");
+}
+
+body {
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  line-height: 1.6;
+
+  background-color: white;
+
+  color: black;
+
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: -240px;
+  width: 240px;
+  height: 100vh;
+  background-color: #00b98d;
+  color: white;
+  font-family: "Young Serif";
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transition: left 0.5s;
+  z-index: 2;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 32px 5px 32px;
+}
+
+nav.open {
+  left: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  min-height: 100vh;
+
+  transition: transform 0.5s;
+}
+
+/*240 bc thats the size of Nav width*/
+main.open {
+  transform: translate(240px, 0);
+}
+
+a.toggle-nav {
+  position: fixed;
+  padding: 24px;
+  color: black;
+  text-decoration: none;
+  top: 0;
+}
+
+a.toggle-nav img {
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+section div {
+  /*350 is the height of the img*/
+  width: 350px;
+  padding: 0 2vh;
+}
+
+h1 {
+  font-family: "young serif";
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+p {
+  margin: 20px 0 20px 0;
+}
+
+a.button {
+  display: inline-block;
+  background-color: #00b98d;
+  text-decoration: none;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 4px;
+}
+
+div.slides {
+  /*475 is the height of the imgs*/
+  height: 475px;
+  position: relative;
+}
+
+div.slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*first img in the slideshow to show first*/
+div.slides img:first-child {
+  z-index: 1;
+}
