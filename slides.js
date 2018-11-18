@@ -47,7 +47,7 @@ slideArea.addEventListener("mouseover", function() {
 
     // Change how the img looks, using TRANSLATE
     // image.style.transform = "translate (50px, 60px)";
-    image.style.transform = `translate (${x}px, ${y}px)`;
+    image.style.transform = `translate(${x}px, ${y}px)`;
     console.log("you are in forEach end");
   });
 });
